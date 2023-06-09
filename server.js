@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const uuid = require('uuid');
 const router = express.Router();
 
@@ -10,6 +11,8 @@ const seatsRoutes = require('./routes/seats.routes');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cors());
+
 
 app.use('/api/', testimonialsRoutes);
 app.use('/api/', concertsRoutes);
