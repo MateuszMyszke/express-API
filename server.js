@@ -7,6 +7,13 @@ const socket = require('socket.io');
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, '/client/build')));
+
+app.use((req, res, next) => {
+  req.io = io;
+  next();
+});
+
 const testimonialsRoutes = require('./routes/testimonials.routes');
 const concertsRoutes = require('./routes/concerts.routes');
 const seatsRoutes = require('./routes/seats.routes');
@@ -14,14 +21,6 @@ const seatsRoutes = require('./routes/seats.routes');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
-
-app.use((req, res, next) => {
-  req.io = io;
-  next();
-});
-
-app.use(express.static(path.join(__dirname, '/client/build')));
-
 
 
 app.use('/api/', testimonialsRoutes);
