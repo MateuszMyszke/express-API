@@ -1,4 +1,4 @@
-const Seat = require('../controllers/concerts.controller');
+const Seat = require('../models/seat.model');
 
 exports.getAll = async (req, res) => {
   try {
@@ -6,6 +6,7 @@ exports.getAll = async (req, res) => {
   }
   catch(err) {
     res.status(500).json({ message: err})
+    console.log(err);
   }
 };
 
