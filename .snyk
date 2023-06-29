@@ -1,0 +1,50 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-MOCHA-2863123:
+    - mocha:
+        reason: None given
+        expires: '2023-07-29T15:09:46.808Z'
+  SNYK-JS-MINIMATCH-3050818:
+    - mocha > minimatch:
+        reason: None given
+        expires: '2023-07-29T15:09:46.808Z'
+  SNYK-JS-MINIMIST-2429795:
+    - mocha > mkdirp > minimist:
+        reason: None given
+        expires: '2023-07-29T15:09:46.808Z'
+  SNYK-JS-MINIMIST-559764:
+    - mocha > mkdirp > minimist:
+        reason: None given
+        expires: '2023-07-29T15:09:46.808Z'
+  SNYK-JS-YARGSPARSER-560381:
+    - mocha > yargs-parser:
+        reason: None given
+        expires: '2023-07-29T15:09:46.808Z'
+    - mocha > yargs > yargs-parser:
+        reason: None given
+        expires: '2023-07-29T15:09:46.808Z'
+    - mocha > yargs-unparser > yargs > yargs-parser:
+        reason: None given
+        expires: '2023-07-29T15:09:46.808Z'
+  SNYK-JS-SEMVER-3247795:
+    - nodemon > semver:
+        reason: None given
+        expires: '2023-07-29T15:09:46.808Z'
+    - mocha > node-environment-flags > semver:
+        reason: None given
+        expires: '2023-07-29T15:09:46.808Z'
+    - mongodb > require_optional > semver:
+        reason: None given
+        expires: '2023-07-29T15:09:46.808Z'
+    - onchange > cross-spawn > semver:
+        reason: None given
+        expires: '2023-07-29T15:09:46.808Z'
+    - mongoose > mongodb > require_optional > semver:
+        reason: None given
+        expires: '2023-07-29T15:09:46.808Z'
+    - nodemon > simple-update-notifier > semver:
+        reason: None given
+        expires: '2023-07-29T15:09:46.808Z'
+patch: {}
